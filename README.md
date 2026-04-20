@@ -29,7 +29,6 @@ A professional, feature-rich Android application designed for small business own
 | :---: | :---: | :---: |
 | ![Create](https://via.placeholder.com/300x600?text=Create+Invoice) | ![Settings](https://via.placeholder.com/300x600?text=Business+Settings) | ![PDF](https://via.placeholder.com/300x600?text=Invoice+PDF) |
 
-> *Note: Replace the placeholder links above with your actual screenshots after uploading them to the `screenshots/` folder in this repo.*
 
 ## 🛠️ Tech Stack
 
