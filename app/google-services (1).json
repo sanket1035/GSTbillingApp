@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1068066873133",
+    "project_id": "gst-billing-app-a0adf",
+    "storage_bucket": "gst-billing-app-a0adf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068066873133:android:2764f3b0297daf34cdfda4",
+        "android_client_info": {
+          "package_name": "com.example.gstbillingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068066873133-m9ivlr6n6ko11mqsc0nu9b17id954ugq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gstbillingapp",
+            "certificate_hash": "cd0bd26d07e7c9074aa156c79e085dc378f8e62e"
+          }
+        },
+        {
+          "client_id": "1068066873133-qrpo1j4o3hqsmj1r36f2sijumnvnhh3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKYY1NR44OMTZcHyY0i0hzuO5eRIJSZ4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068066873133-qrpo1j4o3hqsmj1r36f2sijumnvnhh3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
