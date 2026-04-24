@@ -56,4 +56,4 @@ A professional, feature-rich Android application designed for small business own
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-Built with ❤️ for Small Businesses.
+Built with ❤️ by Sanket Chaudhari for Small Businesses.
