@@ -1,164 +1,132 @@
 # GST Billing Pro 📊
 
-A professional, feature-rich Android application designed for small business owners to manage invoices, track payments, and generate GST-compliant PDFs.
+![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Language](https://img.shields.io/badge/Kotlin-100%25-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-MVVM-blue?style=for-the-badge)
+![Firebase](https://img.shields.io/badge/Firebase-Auth-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Min SDK](https://img.shields.io/badge/Min_SDK-API_24-orange?style=for-the-badge)
+
+> A professional Android application for small businesses to manage invoices, track payments, and generate GST-compliant PDFs — all offline-first.
+
+---
+
+## 📸 Screenshots
+
+| Login | Dashboard | Invoice Management | PDF Preview |
+|---|---|---|---|
+| ![Login](assets/login.png) | ![Dashboard](assets/dashboard1.png) | ![Invoice](assets/create-invoice.png) | ![PDF](assets/pdf-preview.png) |
+
+---
 
 ## 🎯 Problem Statement
 
-Small businesses often struggle with manual invoice creation, payment tracking and GST calculations.
-
-This application digitizes the entire workflow.
+Small businesses in India struggle with manual invoice creation, GST calculations, and payment tracking. GST Billing Pro digitizes the entire workflow — from customer onboarding to GST-compliant PDF generation — with offline-first support.
 
 ---
 
 ## 🚀 Key Features
 
-- **🔐 Secure Authentication**: Integrated with Google Sign-In for a seamless login experience.
-- **👥 Multi-User Data Isolation**: Data is securely isolated per user using Firebase UID and reactive Room flows.
-- **📈 Business Dashboard**: Real-time analytics showing total revenue, pending payments, and monthly sales charts.
-- **📄 Professional PDF Generation**: 
-  - Customizable business profile (Logo, Name, GSTIN, Address).
-  - Automated GST calculations (CGST/SGST).
-  - Dynamic QR codes for invoice verification.
-  - Digital signature placeholder.
-- **📑 Invoice Management**:
-  - Full CRUD operations for invoices and items.
-  - Advanced filtering (Paid, Unpaid, Partial statuses).
-  - Quick Action FAB for rapid invoice creation.
-- **💰 Payment Tracking**: Record partial or full payments with history logs.
-- **📂 Navigation Drawer**: Modern, professional side-drawer navigation for easy access to all modules.
+| Feature | Description |
+|---|---|
+| 🔐 **Secure Auth** | Google Sign-In via Firebase with per-user data isolation |
+| 📈 **Business Dashboard** | Real-time revenue, pending payments & monthly sales charts |
+| 📄 **PDF Generation** | GST invoices with CGST/SGST, QR code & digital signature |
+| 📑 **Invoice Management** | Full CRUD with Paid / Unpaid / Partial status filters |
+| 💰 **Payment Tracking** | Record partial or full payments with history logs |
+| 🏢 **Business Profile** | Customizable logo, GSTIN, address per account |
 
+---
 
 ## 🛠️ Tech Stack
 
-- **Language**: Kotlin
-- **UI Framework**: Jetpack Compose
-- **Architecture**: MVVM (Model-View-ViewModel)
-- **Database**: Room (with Migrations)
-- **Networking/Auth**: Firebase Auth & Google Sign-In
-- **PDF Engine**: Android Graphics PdfDocument
-- **Navigation**: Compose Navigation with ModalNavigationDrawer
-- **Charts**: MPAndroidChart
-
-## 📸 Screenshots
-
-<h3>Login & Registration</h3>
-
-<img src="assets/login.png" width="250" height="600"> <img src="assets/register.png" width="250" height="600">
-
-
-<h3>Dashboard</h3>
-
-<img src="assets/dashboard1.png" width="250"> <img src="assets/dashboard2.png" width="250">
-
-
-<h3>Invoice Management</h3>
-
-<img src="assets/create-invoice.png" width="250"> <img src="assets/invoice-history.png" width="250"> <img src="assets/invoice-details.png" width="250">
-
-<h3>PDF Generation</h3>
-
-<img src="assets/pdf-preview.png" width="300">
-
-## 🏗️ System Architecture
-
-```text
-                    ┌─────────────────────┐
-                    │      Android App    │
-                    │  Jetpack Compose UI │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │     ViewModels      │
-                    │   State Management  │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │    Repository Layer │
-                    │ Business Logic Hub  │
-                    └───────┬─────┬───────┘
-                            │     │
-             ┌──────────────┘     └──────────────┐
-             ▼                                   ▼
-
- ┌─────────────────────┐             ┌─────────────────────┐
- │     Room Database   │             │ Firebase Services   │
- │                     │             │                     │
- │ • Invoices          │             │ • Authentication    │
- │ • Customers         │             │ • Google Sign-In    │
- │ • Payments          │             │ • User Isolation    │
- │ • Products          │             │                     │
- └─────────────────────┘             └─────────────────────┘
-             │
-             ▼
- ┌─────────────────────┐
- │ Analytics Engine    │
- │                     │
- │ • Revenue Analysis  │
- │ • Profit Tracking   │
- │ • Business Insights │
- │ • Customer Ranking  │
- └──────────┬──────────┘
-            │
-            ▼
- ┌─────────────────────┐
- │ PDF Generator       │
- │                     │
- │ • GST Invoice PDF   │
- │ • QR Code Creation  │
- │ • Digital Signature │
- │ • Invoice Sharing   │
- └─────────────────────┘
+```
+Kotlin  •  Jetpack Compose  •  MVVM  •  Room DB  •  Firebase Auth
+Android PdfDocument  •  MPAndroidChart  •  Compose Navigation
 ```
 
-### Architecture Flow
-
-User → Compose UI → ViewModel → Repository
-
-Repository interacts with:
-
-- Room Database for offline storage
-- Firebase Authentication for secure login
-- Analytics Engine for business insights
-- PDF Engine for GST invoice generation
-
-The application follows the MVVM architecture pattern to ensure scalability, maintainability, and testability.
+| Layer | Technology |
+|---|---|
+| Language | Kotlin |
+| UI | Jetpack Compose |
+| Architecture | MVVM + Repository Pattern |
+| Local DB | Room (with Migrations) |
+| Auth | Firebase Auth + Google Sign-In |
+| PDF Engine | Android Graphics PdfDocument |
+| Charts | MPAndroidChart |
+| Navigation | Compose Navigation + ModalNavigationDrawer |
 
 ---
 
-## 🧩 Key Challenges Solved
+## 🏗️ Architecture
 
-- Multi-user data isolation
-- Offline storage using Room
-- GST calculations
-- Dynamic PDF generation
-- Revenue analytics
+```
+Jetpack Compose UI
+        │
+        ▼
+   ViewModels (State Management)
+        │
+        ▼
+  Repository Layer (Business Logic)
+       / \
+      /   \
+Room DB   Firebase Auth
+      \
+   Analytics Engine → PDF Generator
+```
 
----
-
-## 🔮 Future Improvements
-
-- Cloud sync
-- Customer analytics
-- AI expense prediction
-- GST filing integration
+**Flow:** User → Compose UI → ViewModel → Repository → Room / Firebase
 
 ---
 
 ## ⚙️ Setup & Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sanket1035/GSTbillingApp.git
-   ```
-2. Add your `google-services.json` to the `app/` directory.
-3. Build the project in Android Studio.
-4. Run on an emulator or physical device (API 24+).
+### Prerequisites
+- Android Studio Hedgehog or later
+- JDK 17+
+- A Firebase project with Google Sign-In enabled
+
+### Steps
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/sanket1035/GSTbillingApp.git
+
+# 2. Open in Android Studio
+
+# 3. Add your Firebase config
+# Place google-services.json inside the /app directory
+
+# 4. Build & Run
+# Target: API 24+ (Android 7.0 and above)
+```
+
+---
+
+## 🧩 Key Challenges Solved
+
+- **Multi-user data isolation** via Firebase UID scoped Room queries
+- **Offline-first storage** with Room + reactive Flows
+- **Automated GST calculations** (CGST/SGST split)
+- **Dynamic PDF generation** with QR codes on-device
+- **Revenue analytics** without a backend
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Cloud sync (Firebase Firestore)
+- [ ] Customer analytics & ranking
+- [ ] AI-based expense prediction
+- [ ] GST filing integration (GSTN API)
+- [ ] Multi-language support (Hindi, Marathi)
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
-Built with ❤️ by Sanket Chaudhari for Small Businesses.
+
+<p align="center">Built with ❤️ by <a href="https://linkedin.com/in/sanketchaudhari1035">Sanket Chaudhari</a> for Small Businesses</p>
