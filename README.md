@@ -41,21 +41,25 @@ This application digitizes the entire workflow.
 
 ## 📸 Screenshots
 
-| Login | Register |
-|-------|----------|
-| ![Login](assets/login.png) | ![Register](assets/register.png) |
+<h3>Login & Registration</h3>
 
-| Dashboard 1 | Dashboard 2 |
-|-------------|-------------|
-| ![Dashboard 1](assets/dashboard1.png) | ![Dashboard 2](assets/dashboard2.png) |
+<img src="assets/login.png" width="250">
+<img src="assets/register.png" width="250">
 
-| Create Invoice | Invoice History | Invoice Details |
-|----------------|-----------------|------------------|
-| ![Create Invoice](assets/create-invoice.png) | ![Invoice History](assets/invoice-history.png) | ![Invoice Details](assets/invoice-details.png) |
+<h3>Dashboard</h3>
 
-| PDF Preview |
-|-------------|
-| ![PDF Preview](assets/pdf-preview.png) |
+<img src="assets/dashboard1.png" width="250">
+<img src="assets/dashboard2.png" width="250">
+
+<h3>Invoice Management</h3>
+
+<img src="assets/create-invoice.png" width="250">
+<img src="assets/invoice-history.png" width="250">
+<img src="assets/invoice-details.png" width="250">
+
+<h3>PDF Generation</h3>
+
+<img src="assets/pdf-preview.png" width="300">
 
 ## 🏗️ System Architecture
 
