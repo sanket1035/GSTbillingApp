@@ -56,11 +56,23 @@ fun LoginScreen(authViewModel: AuthViewModel = viewModel()) {
             try {
                 val account = task.getResult(ApiException::class.java)!!
                 val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+                isLoading = true
                 authViewModel.signInWithCredential(credential) { success, error ->
-                    if (!success) Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
+                    isLoading = false
+                    if (!success) {
+                        Toast.makeText(context, "Auth Error: $error", Toast.LENGTH_LONG).show()
+                    }
                 }
             } catch (e: ApiException) {
-                Toast.makeText(context, "Google sign in failed", Toast.LENGTH_SHORT).show()
+                isLoading = false
+                val errorMessage = when (e.statusCode) {
+                    7 -> "Network Error. Check your connection."
+                    10 -> "Developer Error: Check SHA-1 and package name in Firebase."
+                    12500 -> "Sign-in failed. Try updating Google Play Services."
+                    12501 -> "Sign-in cancelled."
+                    else -> "Google sign in failed (Code: ${e.statusCode})"
+                }
+                Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
             }
         }
     }

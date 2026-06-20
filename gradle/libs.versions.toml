@@ -1,19 +1,20 @@
 [versions]
-agp = "8.7.3"
+agp = "9.1.1"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-kotlin = "2.0.21"
+kotlin = "2.1.0"
 composeBom = "2024.12.01"
 mpAndroidChart = "v3.1.0"
 zxing = "3.5.3"
 navigationCompose = "2.8.5"
-room = "2.6.1"
+room = "2.8.4"
 firebaseBom = "33.7.0"
 googleServices = "4.4.2"
+ksp = "2.1.0-1.0.29"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,4 +47,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
