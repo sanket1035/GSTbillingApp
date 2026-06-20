@@ -43,13 +43,13 @@ This application digitizes the entire workflow.
 
 <h3>Login & Registration</h3>
 
-<img src="assets/login.png" width="250">
-<img src="assets/register.png" width="250">
+<img src="assets/login.png" width="250"> <img src="assets/register.png" width="250">
+
 
 <h3>Dashboard</h3>
 
-<img src="assets/dashboard1.png" width="250">
-<img src="assets/dashboard2.png" width="250">
+<img src="assets/dashboard1.png" width="250"> <img src="assets/dashboard2.png" width="250">
+
 
 <h3>Invoice Management</h3>
 
