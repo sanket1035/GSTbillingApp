@@ -43,7 +43,7 @@ This application digitizes the entire workflow.
 
 <h3>Login & Registration</h3>
 
-<img src="assets/login.png" width="250"> <img src="assets/register.png" width="250">
+<img src="assets/login.png" width="250" height="600"> <img src="assets/register.png" width="250" height="600">
 
 
 <h3>Dashboard</h3>
@@ -53,9 +53,7 @@ This application digitizes the entire workflow.
 
 <h3>Invoice Management</h3>
 
-<img src="assets/create-invoice.png" width="250">
-<img src="assets/invoice-history.png" width="250">
-<img src="assets/invoice-details.png" width="250">
+<img src="assets/create-invoice.png" width="250"> <img src="assets/invoice-history.png" width="250"> <img src="assets/invoice-details.png" width="250">
 
 <h3>PDF Generation</h3>
 
