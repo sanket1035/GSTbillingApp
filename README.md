@@ -13,9 +13,13 @@
 
 ## 📸 Screenshots
 
-| Login | Dashboard | Invoice Management | PDF Preview |
+| Login | Register | Dashboard | Dashboard 2 |
 |---|---|---|---|
-| ![Login](assets/login.png) | ![Dashboard](assets/dashboard1.png) | ![Invoice](assets/create-invoice.png) | ![PDF](assets/pdf-preview.png) |
+| ![Login](assets/login.png) | ![Register](assets/register.png) | ![Dashboard](assets/dashboard1.png) | ![Dashboard 2](assets/dashboard2.png) |
+
+| Create Invoice | Invoice History | Invoice Details | PDF Preview |
+|---|---|---|---|
+| ![Create Invoice](assets/create-invoice.png) | ![Invoice History](assets/invoice-history.png) | ![Invoice Details](assets/invoice-details.png) | ![PDF](assets/pdf-preview.png) |
 
 ---
 
