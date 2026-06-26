@@ -1,4 +1,4 @@
-# GST Billing Pro 📊
+# GST Billing Pro 
 
 ![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Language](https://img.shields.io/badge/Kotlin-100%25-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
@@ -13,7 +13,7 @@
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 | Login | Register | Dashboard | Dashboard 2 |
 |---|---|---|---|
@@ -25,26 +25,26 @@
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Small businesses in India struggle with manual invoice creation, GST calculations, and payment tracking. GST Billing Pro digitizes the entire workflow — from customer onboarding to GST-compliant PDF generation — with offline-first support.
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 | Feature | Description |
 |---|---|
-| 🔐 **Secure Auth** | Google Sign-In via Firebase with per-user data isolation |
-| 📈 **Business Dashboard** | Real-time revenue, pending payments & monthly sales charts |
-| 📄 **PDF Generation** | GST invoices with CGST/SGST, QR code & digital signature |
-| 📑 **Invoice Management** | Full CRUD with Paid / Unpaid / Partial status filters |
-| 💰 **Payment Tracking** | Record partial or full payments with history logs |
-| 🏢 **Business Profile** | Customizable logo, GSTIN, address per account |
+|  **Secure Auth** | Google Sign-In via Firebase with per-user data isolation |
+|  **Business Dashboard** | Real-time revenue, pending payments & monthly sales charts |
+|  **PDF Generation** | GST invoices with CGST/SGST, QR code & digital signature |
+|  **Invoice Management** | Full CRUD with Paid / Unpaid / Partial status filters |
+|  **Payment Tracking** | Record partial or full payments with history logs |
+|  **Business Profile** | Customizable logo, GSTIN, address per account |
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ```
 Kotlin  •  Jetpack Compose  •  MVVM  •  Room DB  •  Firebase Auth
@@ -64,7 +64,7 @@ Android PdfDocument  •  MPAndroidChart  •  Compose Navigation
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Jetpack Compose UI
@@ -85,7 +85,7 @@ Room DB   Firebase Auth
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### Prerequisites
 - Android Studio Hedgehog or later
@@ -109,7 +109,7 @@ git clone https://github.com/sanket1035/GSTbillingApp.git
 
 ---
 
-## 🧩 Key Challenges Solved
+##  Key Challenges Solved
 
 - **Multi-user data isolation** via Firebase UID scoped Room queries
 - **Offline-first storage** with Room + reactive Flows
@@ -119,7 +119,7 @@ git clone https://github.com/sanket1035/GSTbillingApp.git
 
 ---
 
-## 🔮 Roadmap
+##  Roadmap
 
 - [ ] Cloud sync (Firebase Firestore)
 - [ ] Customer analytics & ranking
