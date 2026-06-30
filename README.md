@@ -9,7 +9,7 @@
 
 > A professional Android application for small businesses to manage invoices, track payments, and generate GST-compliant PDFs — all offline-first.
 
-🎥 **Demo Video:** [Watch on YouTube](https://youtube.com/shorts/w3ziEUZwOzE?si=RspfF8A9paPtiHBH)
+🎥 **Demo Video:** [Watch on YouTube](https://youtube.com/shorts/Jh73Ag2uwOA?si=lBcdxMejG6HlHuW2)
 
 ---
 
