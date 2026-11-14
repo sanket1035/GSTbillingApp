@@ -131,6 +131,16 @@ fun MainAppContent(viewModel: InvoiceViewModel, authViewModel: AuthViewModel) {
                     modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
                 )
                 NavigationDrawerItem(
+                    icon = { Icon(Icons.Default.DocumentScanner, null) },
+                    label = { Text("Scan Bill") },
+                    selected = currentRoute == "scan_bill",
+                    onClick = {
+                        navController.navigate("scan_bill")
+                        scope.launch { drawerState.close() }
+                    },
+                    modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
+                )
+                NavigationDrawerItem(
                     icon = { Icon(Icons.Default.History, null) },
                     label = { Text("Invoice History") },
                     selected = currentRoute == "history",
@@ -179,6 +189,7 @@ fun MainAppContent(viewModel: InvoiceViewModel, authViewModel: AuthViewModel) {
                         Text(when(currentRoute) {
                             "dashboard" -> "Dashboard"
                             "create_invoice" -> "Create Invoice"
+                            "scan_bill" -> "Scan Bill"
                             "history" -> "Invoice History"
                             "settings" -> "Settings"
                             else -> "GST Billing App"
@@ -207,8 +218,18 @@ fun MainAppContent(viewModel: InvoiceViewModel, authViewModel: AuthViewModel) {
             ) {
                 composable("dashboard") { DashboardScreen(viewModel) }
                 composable("create_invoice") {
-                    CreateInvoiceScreen(viewModel, onViewHistory = {
-                        navController.navigate("history")
+                    CreateInvoiceScreen(
+                        viewModel,
+                        onViewHistory = { navController.navigate("history") },
+                        onScanBill = { navController.navigate("scan_bill") }
+                    )
+                }
+                composable("scan_bill") {
+                    ScanBillScreen(viewModel, onDone = {
+                        // Back to the invoice form with scanned items filled in
+                        navController.navigate("create_invoice") {
+                            popUpTo("scan_bill") { inclusive = true }
+                        }
                     })
                 }
                 composable("history") {
