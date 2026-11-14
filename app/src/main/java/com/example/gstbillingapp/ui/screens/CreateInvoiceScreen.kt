@@ -9,6 +9,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DocumentScanner
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -29,7 +30,7 @@ import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CreateInvoiceScreen(viewModel: InvoiceViewModel, onViewHistory: () -> Unit) {
+fun CreateInvoiceScreen(viewModel: InvoiceViewModel, onViewHistory: () -> Unit, onScanBill: () -> Unit = {}) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     
@@ -49,6 +50,14 @@ fun CreateInvoiceScreen(viewModel: InvoiceViewModel, onViewHistory: () -> Unit) 
     
     var itemSuggestions by remember { mutableStateOf(emptyList<String>()) }
     var customerSuggestions by remember { mutableStateOf(emptyList<String>()) }
+
+    val scannedCustomer by viewModel.scannedCustomerName.collectAsState()
+    LaunchedEffect(scannedCustomer) {
+        if (scannedCustomer.isNotBlank()) {
+            customerName = scannedCustomer
+            viewModel.consumeScannedCustomerName()
+        }
+    }
 
     LaunchedEffect(itemName) {
         if (itemName.length >= 2) {
@@ -81,6 +90,14 @@ fun CreateInvoiceScreen(viewModel: InvoiceViewModel, onViewHistory: () -> Unit) 
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             item { Spacer(Modifier.height(8.dp)) }
+
+            item {
+                OutlinedButton(onClick = onScanBill, modifier = Modifier.fillMaxWidth()) {
+                    Icon(Icons.Default.DocumentScanner, null)
+                    Spacer(Modifier.width(8.dp))
+                    Text("Scan Bill (photo to items)")
+                }
+            }
 
             // Customer Section
             item {

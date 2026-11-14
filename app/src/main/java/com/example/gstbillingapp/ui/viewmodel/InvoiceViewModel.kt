@@ -167,6 +167,18 @@ class InvoiceViewModel(private val repository: InvoiceRepository) : ViewModel() 
         _currentInvoiceItems.value += newItem
     }
 
+    // Customer name read from a scanned bill; CreateInvoiceScreen consumes it once.
+    private val _scannedCustomerName = MutableStateFlow("")
+    val scannedCustomerName = _scannedCustomerName.asStateFlow()
+
+    fun setScannedCustomerName(name: String) {
+        _scannedCustomerName.value = name
+    }
+
+    fun consumeScannedCustomerName() {
+        _scannedCustomerName.value = ""
+    }
+
     fun removeItem(item: InvoiceItemEntity) {
         _currentInvoiceItems.value -= item
     }

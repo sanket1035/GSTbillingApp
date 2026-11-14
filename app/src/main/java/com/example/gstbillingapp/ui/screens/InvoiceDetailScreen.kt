@@ -69,6 +69,14 @@ fun InvoiceDetailScreen(
                             val file = PdfGenerator(context).generateInvoicePdf(data.invoice, data.items, settings)
                             sharePdf(context, file)
                         }) { Icon(Icons.Default.Share, "Share") }
+
+                        IconButton(onClick = {
+                            val file = PdfGenerator(context).generateInvoicePdf(data.invoice, data.items, settings)
+                            com.example.gstbillingapp.utils.WhatsAppShare.share(
+                                context, file,
+                                com.example.gstbillingapp.utils.WhatsAppShare.summaryText(data.invoice, data.items)
+                            )
+                        }) { Icon(Icons.Default.Chat, "Share on WhatsApp") }
                     }
                 }
             )

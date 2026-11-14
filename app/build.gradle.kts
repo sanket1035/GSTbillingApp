@@ -64,6 +64,9 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.play.services.auth)
 
+    // ML Kit on-device OCR (Scan Bill)
+    implementation(libs.mlkit.text.recognition)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
